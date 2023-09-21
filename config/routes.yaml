@@ -1,5 +1,50 @@
-controllers:
-    resource:
-        path: ../src/Controller/
-        namespace: App\Controller
-    type: attribute
+
+# ------- POST --------
+app_post_list:
+    path: /api/post/list
+    controller: App\Controller\PostController::posts_list
+
+app_post_show:
+    path: /post/show/{id}
+    controller: App\Controller\PostController::show
+
+app_post_add:
+    path: /post/add
+    controller: App\Controller\PostController::add
+
+app_post_update:
+    path: /post/update/{id}
+    controller: App\Controller\PostController::update
+
+app_post_delete:
+    path: /post/delete/{id}
+    controller: App\Controller\PostController::delete
+
+app_post_details:
+    path: /api/post/details/{id}
+    controller: App\Controller\PostController::post_details
+
+app_api_add_post:
+    path: /api/post/add
+    controller: App\Controller\PostController::api_add_post
+    methods:    POST
+
+api_delete_post:
+    path: /api/post/delete/{id}
+    controller: App\Controller\PostController::api_delete_post
+    methods:    POST
+
+# -------- Comments ---------
+
+api_comment_list:
+    path: /api/comments/by/post/{id}
+    controller: App\Controller\PostController::comments_list
+
+api_comment_add:
+    path: /api/comment/add/{id}
+    controller: App\Controller\CommentController::api_add_comment
+
+api_comment_delete:
+    path: /api/comment/delete/{id}
+    controller: App\Controller\CommentController::api_delete_comment
+

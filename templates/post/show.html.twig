@@ -1,0 +1,28 @@
+<div>
+    <h1>{{post.title}}</h1>
+    <p>{{post.content}}</p>
+</div>
+<br>
+<hr>
+<br>
+
+{{form_start(form)}}
+
+<button tpye="submit">Add</button>
+
+{{form_end(form)}}
+
+
+<br>
+<hr>
+<br>
+
+
+{% for comment in comments  %}
+<div>
+    <p>{{comment.content}}</p>
+</div>
+{% endfor %}
+
+
+
