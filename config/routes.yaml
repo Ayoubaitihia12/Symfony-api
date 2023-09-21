@@ -1,8 +1,5 @@
 
 # ------- POST --------
-app_post_list:
-    path: /api/post/list
-    controller: App\Controller\PostController::posts_list
 
 app_post_show:
     path: /post/show/{id}
@@ -20,11 +17,15 @@ app_post_delete:
     path: /post/delete/{id}
     controller: App\Controller\PostController::delete
 
-app_post_details:
+api_post_list:
+    path: /api/post/list
+    controller: App\Controller\PostController::posts_list
+
+api_post_details:
     path: /api/post/details/{id}
     controller: App\Controller\PostController::post_details
 
-app_api_add_post:
+api_add_post:
     path: /api/post/add
     controller: App\Controller\PostController::api_add_post
     methods:    POST
@@ -43,8 +44,10 @@ api_comment_list:
 api_comment_add:
     path: /api/comment/add/{id}
     controller: App\Controller\CommentController::api_add_comment
+    methods:    POST
 
 api_comment_delete:
     path: /api/comment/delete/{id}
     controller: App\Controller\CommentController::api_delete_comment
+    methods:    POST
 
